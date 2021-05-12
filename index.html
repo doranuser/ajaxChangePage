@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+function getData(pageName){
+	var req=new XMLHttpRequest();
+	req.open("get","http://192.168.1.104:8080/ajaxTest/"+pageName);
+	req.onload=function (){
+		
+		$("#content").html(this.responseText);
+	};
+	req.send();//送出連線
+}
+
+</script>
+
+</head>
+<body>
+
+<div>
+	<span onclick="getData('popular.html');">最新</span>
+	<span onclick="getData('latest.html');">熱門</span>
+	<span onclick="getData2()">jsontest</span><span id="ya"></span>
+</div>
+<hr>
+<div id="content"></div>
+
+</body>
+</html>
