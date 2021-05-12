@@ -8,7 +8,7 @@
 
 function getData(pageName){
 	var req=new XMLHttpRequest();
-	req.open("get","https://github.com/doranuser/ajaxChangePage/"+pageName);
+	req.open("get","https://doranuser.github.io/ajaxChangePage/"+pageName);
 	req.onload=function (){
 		
 		$("#content").html(this.responseText);
