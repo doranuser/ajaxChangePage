@@ -13,7 +13,7 @@ function getData(pageName){
 		
 		$("#content").html(this.responseText);
 	};
-	req.send();//送出連線
+	req.send();
 }
 
 </script>
@@ -24,7 +24,6 @@ function getData(pageName){
 <div>
 	<span onclick="getData('popular.html');">最新</span>
 	<span onclick="getData('latest.html');">熱門</span>
-	<span onclick="getData2()">jsontest</span><span id="ya"></span>
 </div>
 <hr>
 <div id="content"></div>
